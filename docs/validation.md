@@ -5,7 +5,7 @@ This records work actually executed, not a promise that hosted CI passed. Local 
 | Check | Observed result |
 | --- | --- |
 | Full pytest suite | 33 passed, 11.54 seconds |
-| Final Streamlit AppTest rerun | 3 passed, 14.92 seconds on 11 October 2026 |
+| Final Streamlit AppTest rerun | 3 passed, 20.78 seconds on 11 October 2026 after adding the live GitHub source link |
 | Ruff | All checks passed |
 | Baseline pipeline | 10,000 users, seed 42, 90 calendar days; linked tables and financial reconciliation passed |
 | Scenario comparison | Full-size positive, neutral and negative runs; negative retention gain blocked by economic guardrails |
@@ -23,9 +23,15 @@ On 11 October 2026, the full 1,000-user negative scenario was executed through t
 
 **Synthetic Data — Analytical Simulation, Not Real Company Results.** The default D7 metric coincides with control credit expiry, while later treatment grants can remain until the start of D11. This policy difference is disclosed prominently. Neither statistical significance nor A/A calibration validates a real Monolit effect.
 
-Only Python 3.12 was executed locally. CI definitions cover Python 3.11–3.13, but remote GitHub Actions have not been run. Dependency inputs are pinned; package patch updates and security maintenance remain ordinary future maintenance.
+Python 3.12 was executed locally. Remote GitHub Actions also passed on Python 3.11, 3.12 and 3.13 in clean Ubuntu runners: pinned dependency installation, Ruff, all 33 tests, a 250-user three-scenario SQL/pipeline smoke run, and the independent real-data analysis. See [PR checks](https://github.com/alyalbina/ai-product-growth-lab/actions/runs/38150789073) and [main checks](https://github.com/alyalbina/ai-product-growth-lab/actions/runs/38150923989). Dependency inputs are pinned; package patch updates and security maintenance remain ordinary future maintenance.
 
-The Python dashboard has been tested locally; a public Streamlit deployment is not verified. GitHub authentication during this task belonged to AlbinaResearcher, with no write permission to the requested alyalbina owner. No repository was created under a substitute owner. The ZIP and `docs/publishing.md` provide the authorized fallback. Public static case publication is recorded below only after successful deployment.
+The Python dashboard has been tested locally; a public Streamlit deployment is not yet verified. On 11 October 2026, the owner completed GitHub CLI authentication as alyalbina. The new public repository is [alyalbina/ai-product-growth-lab](https://github.com/alyalbina/ai-product-growth-lab). [PR #1](https://github.com/alyalbina/ai-product-growth-lab/pull/1) was merged after passing CI. The existing Hotel Guest Experience Platform repository was not changed.
+
+## Verified GitHub Pages publication
+
+[The Pages deployment](https://github.com/alyalbina/ai-product-growth-lab/actions/runs/38150924002) succeeded for merge commit `1fe1ac33bb386c7b14122aba2ca4797301e3fe64`. The actual [public case](https://alyalbina.github.io/ai-product-growth-lab/) was then checked in the browser: model results rendered, source link resolved to the correct repository, and the localhost-only dashboard link was hidden. The [synthetic report](https://alyalbina.github.io/ai-product-growth-lab/research.html) rendered nine Plotly charts; the [separate UCI report](https://alyalbina.github.io/ai-product-growth-lab/external.html) rendered three charts with the correct purchase rate and provenance. A screenshot of the published case is included separately in the output folder.
+
+GitHub Pages serves static HTML/JS research outputs. It is not the Python runtime, and its publication does not verify a live scenario simulator. The Streamlit sign-in page was opened; the owner must complete service sign-in/terms and the relevant GitHub connection before that deployment can be performed.
 
 ## Static publication attempt
 

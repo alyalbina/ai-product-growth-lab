@@ -28,7 +28,9 @@ Open http://localhost:8501. The supplied ZIP already contains seeded data, repor
 
 Serve the static case study with `python -m http.server 8000` and open http://localhost:8000/case-study/. `case-study/research.html` is an offline interactive Python research report, including cohort heatmaps, meaningful retention curves, daily activity, distributions, monetization and economic sensitivity. `case-study/external.html` is the separate real-data report. Open either directly or via the server.
 
-**GitHub:** [alyalbina/ai-product-growth-lab](https://github.com/alyalbina/ai-product-growth-lab). The implementation is submitted through a feature branch and pull request. Static Pages publication and public Python hosting are tracked separately in [publication instructions](docs/publishing.md) and [executed verification](docs/validation.md). There is no fabricated CI badge.
+**Published:** [GitHub source](https://github.com/alyalbina/ai-product-growth-lab) · [Product case study](https://alyalbina.github.io/ai-product-growth-lab/) · [Interactive research preview](https://alyalbina.github.io/ai-product-growth-lab/research.html) · [Independent real-data study](https://alyalbina.github.io/ai-product-growth-lab/external.html).
+
+[Pull Request #1](https://github.com/alyalbina/ai-product-growth-lab/pull/1) was merged after [CI passed on Python 3.11–3.13](https://github.com/alyalbina/ai-product-growth-lab/actions/runs/38150789073). The [main-branch checks](https://github.com/alyalbina/ai-product-growth-lab/actions/runs/38150923989) also passed. The public site and both reports were checked in the browser. These static reports support hover, zoom and exports; they do not execute the Python simulation. Public Streamlit deployment still requires the owner's Community Cloud sign-in. See [publishing](docs/publishing.md) and [verification](docs/validation.md).
 
 ![Working local dashboard: synthetic data and explicit D7 interpretation boundary](docs/screenshots/dashboard-overview.jpg)
 

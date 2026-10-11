@@ -1,6 +1,6 @@
 # CV, LinkedIn and interview preparation
 
-This is independent portfolio work, built with AI engineering assistance. Monolit experience motivated the question; no preserved Monolit logs, experimental results or verified rollout are represented. Review the implementation and reproduce it before presenting technical ownership in an interview. Link slots below remain unpublished until verified.
+This is independent portfolio work, built with AI engineering assistance. Monolit experience motivated the question; no preserved Monolit logs, experimental results or verified rollout are represented. Review the implementation and reproduce it before presenting technical ownership in an interview. GitHub and the static public case were verified on 11 October 2026; a hosted Python runtime is still pending.
 
 ## English CV
 
@@ -10,7 +10,7 @@ This is independent portfolio work, built with AI engineering assistance. Monoli
 
 **Technical skills:** Python, SQL (SQLite), pandas, NumPy, SciPy, Plotly, Streamlit, cohort analysis, metric design, experiment design, power analysis, confidence intervals, unit economics, data validation, pytest, Ruff, GitHub Actions.
 
-**GitHub:** https://github.com/alyalbina/ai-product-growth-lab. **Demo:** add the verified Streamlit URL. **Case study:** add the verified Pages URL. Do not present these outputs as Monolit business impact.
+**GitHub:** https://github.com/alyalbina/ai-product-growth-lab. **Public case study:** https://alyalbina.github.io/ai-product-growth-lab/. **Interactive research preview:** https://alyalbina.github.io/ai-product-growth-lab/research.html. **Python dashboard:** hosted URL pending; run locally from the repository. Do not present the static preview as a hosted Python simulator or these outputs as Monolit business impact.
 
 ## LinkedIn
 

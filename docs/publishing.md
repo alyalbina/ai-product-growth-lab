@@ -2,13 +2,31 @@
 
 Intended GitHub owner: **alyalbina**. Intended repository: **ai-product-growth-lab**. Never change the existing hotel repository.
 
-The authenticated account during preparation was AlbinaResearcher and did not have write permission to alyalbina. Unless `docs/validation.md` records a subsequently verified deployment, this archive is a publication-ready delivery, not an already published repository or public Python demo. Planned URLs must not appear in a CV as live links.
+## Verified publication on 11 October 2026
 
-An additional Sites publication attempt stopped at an automatic permission rejection before the source push; no public Site is claimed. The local static case and both interactive reports are complete and included in the ZIP.
+- GitHub: https://github.com/alyalbina/ai-product-growth-lab.
+- Implementation: [PR #1](https://github.com/alyalbina/ai-product-growth-lab/pull/1), merged after successful CI on Python 3.11–3.13.
+- Public static case: https://alyalbina.github.io/ai-product-growth-lab/.
+- Interactive synthetic report: https://alyalbina.github.io/ai-product-growth-lab/research.html.
+- Separate real-data report: https://alyalbina.github.io/ai-product-growth-lab/external.html.
+- Python dashboard: implemented and tested locally; Community Cloud sign-in and deployment remain pending.
 
-## GitHub via command line
+GitHub CLI now uses alyalbina. The initial preparation account was AlbinaResearcher; it was not used to create this repository. Windows Git transport encountered SChannel and shell restrictions in the agent's environment, so ordinary Git objects were uploaded through GitHub's documented Git API using gh's secure keyring authentication. Local and uploaded implementation commit SHAs matched. No credential was copied into source or delivery files.
 
-Authenticate as alyalbina (or an account explicitly granted creation rights). Do not paste access tokens into files or chat. Create a new empty public repository with the exact name, then from the unpacked project:
+An earlier Sites publication attempt stopped at an automatic permission rejection before the source push. GitHub Pages is the successfully verified public route. The static case and both interactive reports are also included in the ZIP.
+
+## Clone the published project
+
+```bash
+git clone https://github.com/alyalbina/ai-product-growth-lab.git
+cd ai-product-growth-lab
+python -m pip install -r requirements-dev.txt
+python -m streamlit run dashboard/app.py
+```
+
+## Publish a new independent copy via command line
+
+The requested alyalbina repository already exists. The following sequence is a template for a new copy under an owner/name you select; do not rerun repository creation against the existing delivery. Authenticate as the selected owner. Do not paste access tokens into files or chat. From a fresh unpacked project:
 
 ```bash
 git init -b main
@@ -26,7 +44,7 @@ Review CI and merge the PR when satisfied. Generated raw tables are intentionall
 
 ## Static case study: GitHub Pages
 
-In repository Settings → Pages, select **GitHub Actions** as the source. The included Pages workflow deploys `case-study/` on main. Confirm its action succeeds, then visit the actual Pages URL and test navigation, downloads and the dashboard link. Pages does not execute Python. The expected URL after deployment is `https://alyalbina.github.io/ai-product-growth-lab/`; this is a proposed address until checked.
+GitHub Actions is already configured as the Pages source for this repository. The included workflow deploys `case-study/` on main. Its initial deployment succeeded, and the actual public URL and both reports were checked. Pages does not execute Python. For future edits, confirm the corresponding deployment succeeds and retest changed navigation or charts.
 
 ## Python dashboard: Streamlit Community Cloud
 
