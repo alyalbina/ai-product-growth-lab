@@ -1,0 +1,3 @@
+variant,eligible_users,sessions_per_user,requests_per_user
+control,3466,5.351125216387767,16.826889786497404
+treatment,3370,6.346884272997032,19.74213649851632

@@ -1,0 +1,571 @@
+{
+  "config": {
+    "n_users": 10000,
+    "horizon_days": 90,
+    "seed": 42,
+    "scenario": "neutral",
+    "daily_credit": 1.0,
+    "grant_days": 5,
+    "grant_frequency": 1,
+    "expiry_days": 7,
+    "cost_multiplier": 1.0,
+    "subscription_price": 19.0,
+    "return_multiplier": 1.0,
+    "purchase_multiplier": 1.0
+  },
+  "summary": [
+    {
+      "variant": "control",
+      "users": 5011,
+      "mature_users": 3466,
+      "d1": 0.25116279069767444,
+      "d7": 0.11664141960614585,
+      "d30": 0.1249266862170088,
+      "meaningful_d7": 0.01384981605713049,
+      "paid_conversion": 0.1289671090594345,
+      "revenue": 8493.0,
+      "inference_cost": 751.952409,
+      "contribution": 7741.0475910000005,
+      "margin": 0.9114620971388203,
+      "arpu": 2.4503750721292556,
+      "arppu": 19.0,
+      "active_users": 3466,
+      "requests": 58322,
+      "bonus_only_rate": 0.37402275300587695
+    },
+    {
+      "variant": "treatment",
+      "users": 4989,
+      "mature_users": 3370,
+      "d1": 0.3464742938427149,
+      "d7": 0.2691556327327979,
+      "d30": 0.13967489464178207,
+      "meaningful_d7": 0.2127197742565661,
+      "paid_conversion": 0.13827893175074185,
+      "revenue": 8854.0,
+      "inference_cost": 849.3292116,
+      "contribution": 8004.6707884,
+      "margin": 0.9040739539643099,
+      "arpu": 2.627299703264095,
+      "arppu": 19.0,
+      "active_users": 3370,
+      "requests": 66531,
+      "bonus_only_rate": 0.32914114731871524
+    }
+  ],
+  "experiment": {
+    "primary": {
+      "control_n": 4621,
+      "treatment_n": 4607,
+      "control_rate": 0.01384981605713049,
+      "treatment_rate": 0.2127197742565661,
+      "effect": 0.19886995819943562,
+      "ci_low": 0.18668821928138027,
+      "ci_high": 0.21128875086510368,
+      "p_value": 9.076449679776698e-200
+    },
+    "secondary": {
+      "d1": {
+        "control_n": 4945,
+        "treatment_n": 4921,
+        "control_rate": 0.25116279069767444,
+        "treatment_rate": 0.3464742938427149,
+        "effect": 0.09531150314504044,
+        "ci_low": 0.07730590081752875,
+        "ci_high": 0.11323442929302645,
+        "p_value": 4.5387625715490515e-25,
+        "p_adjusted": 1.3616287714647155e-24
+      },
+      "d7": {
+        "control_n": 4621,
+        "treatment_n": 4607,
+        "control_rate": 0.11664141960614585,
+        "treatment_rate": 0.2691556327327979,
+        "effect": 0.15251421312665206,
+        "ci_low": 0.13668015818781376,
+        "ci_high": 0.16828687245343393,
+        "p_value": 5.6546973809179554e-77,
+        "p_adjusted": 2.2618789523671822e-76
+      },
+      "d30": {
+        "control_n": 3410,
+        "treatment_n": 3322,
+        "control_rate": 0.1249266862170088,
+        "treatment_rate": 0.13967489464178207,
+        "effect": 0.014748208424773271,
+        "ci_low": -0.0014403100720680045,
+        "ci_high": 0.03096410213173468,
+        "p_value": 0.07407855853788617,
+        "p_adjusted": 0.14815711707577234
+      },
+      "paid_conversion": {
+        "control_n": 3466,
+        "treatment_n": 3370,
+        "control_rate": 0.1289671090594345,
+        "treatment_rate": 0.13827893175074185,
+        "effect": 0.009311822691307342,
+        "ci_low": -0.006821465496582014,
+        "ci_high": 0.02547189799723753,
+        "p_value": 0.2578401648624371,
+        "p_adjusted": 0.2578401648624371
+      }
+    },
+    "srm": {
+      "control_n": 5011,
+      "treatment_n": 4989,
+      "p_value": 0.8258711547035709,
+      "passed": true
+    },
+    "economics": {
+      "effect": 0.14184922895960916,
+      "ci_low": -0.15396822086652134,
+      "ci_high": 0.43766667878573967,
+      "p_value": 0.3472502287278493,
+      "bootstrap_low": -0.15405958031987088,
+      "bootstrap_high": 0.4389401132419449,
+      "bootstrap_iterations": 500
+    },
+    "bonus_only_difference": -0.04488160568716171,
+    "rules": {
+      "srm": true,
+      "primary_significant": true,
+      "practical_effect": true,
+      "contribution_noninferior": true,
+      "paid_conversion_noninferior": true,
+      "bonus_only_guardrail": true
+    },
+    "decision": "Advance to a real controlled pilot",
+    "power": {
+      "control_rate": 0.2,
+      "mde": 0.02,
+      "alpha": 0.05,
+      "power": 0.8,
+      "per_arm": 6510,
+      "total": 13020,
+      "method": "two-proportion normal planning approximation"
+    },
+    "data_type": "Synthetic analytical simulation"
+  },
+  "validation_errors": [],
+  "sql_queries_executed": [
+    "engagement.sql",
+    "engagement_sessions.sql",
+    "funnels/activation_to_paid.sql",
+    "monetization/revenue_cohorts.sql",
+    "retention/cohort_retention.sql",
+    "retention/day_retention.sql",
+    "retention/grant_return_association.sql",
+    "retention/rolling_retention.sql",
+    "unit_economics/contribution.sql"
+  ],
+  "scenario_comparison": [
+    {
+      "scenario": "positive",
+      "summary": [
+        {
+          "variant": "control",
+          "users": 5011,
+          "mature_users": 3466,
+          "d1": 0.24084934277047523,
+          "d7": 0.11902185674096516,
+          "d30": 0.12023460410557185,
+          "meaningful_d7": 0.01211858904998918,
+          "paid_conversion": 0.1154068090017311,
+          "revenue": 7600.0,
+          "inference_cost": 724.6157850000001,
+          "contribution": 6875.384215,
+          "margin": 0.904655817763158,
+          "arpu": 2.192729371032891,
+          "arppu": 19.0,
+          "active_users": 3466,
+          "requests": 56317,
+          "bonus_only_rate": 0.3851714953525031
+        },
+        {
+          "variant": "treatment",
+          "users": 4989,
+          "mature_users": 3370,
+          "d1": 0.40703109124161757,
+          "d7": 0.2891252441936184,
+          "d30": 0.18242022877784467,
+          "meaningful_d7": 0.21836336010418927,
+          "paid_conversion": 0.22225519287833828,
+          "revenue": 14231.0,
+          "inference_cost": 1269.0452382,
+          "contribution": 12961.9547618,
+          "margin": 0.9108252942027967,
+          "arpu": 4.222848664688427,
+          "arppu": 19.0,
+          "active_users": 3370,
+          "requests": 96141,
+          "bonus_only_rate": 0.2606138008436859
+        }
+      ],
+      "experiment": {
+        "primary": {
+          "control_n": 4621,
+          "treatment_n": 4607,
+          "control_rate": 0.01211858904998918,
+          "treatment_rate": 0.21836336010418927,
+          "effect": 0.20624477105420008,
+          "ci_low": 0.19401520045126114,
+          "ci_high": 0.2187188718117763,
+          "p_value": 1.4720382396327265e-211
+        },
+        "secondary": {
+          "d1": {
+            "control_n": 4945,
+            "treatment_n": 4921,
+            "control_rate": 0.24084934277047523,
+            "treatment_rate": 0.40703109124161757,
+            "effect": 0.16618174847114234,
+            "ci_low": 0.14793113787493037,
+            "ci_high": 0.1842780869565095,
+            "p_value": 1.2413915624601809e-69,
+            "p_adjusted": 3.724174687380543e-69
+          },
+          "d7": {
+            "control_n": 4621,
+            "treatment_n": 4607,
+            "control_rate": 0.11902185674096516,
+            "treatment_rate": 0.2891252441936184,
+            "effect": 0.17010338745265324,
+            "ci_low": 0.15398184823798422,
+            "ci_high": 0.1861433746968977,
+            "p_value": 2.0432840537629732e-91,
+            "p_adjusted": 8.173136215051893e-91
+          },
+          "d30": {
+            "control_n": 3410,
+            "treatment_n": 3322,
+            "control_rate": 0.12023460410557185,
+            "treatment_rate": 0.18242022877784467,
+            "effect": 0.062185624672272816,
+            "ci_low": 0.04510854714371211,
+            "ci_high": 0.07928032266643673,
+            "p_value": 1.033243134976416e-12,
+            "p_adjusted": 1.033243134976416e-12
+          },
+          "paid_conversion": {
+            "control_n": 3466,
+            "treatment_n": 3370,
+            "control_rate": 0.1154068090017311,
+            "treatment_rate": 0.22225519287833828,
+            "effect": 0.10684838387660718,
+            "ci_low": 0.08922495383770822,
+            "ci_high": 0.12446131400956346,
+            "p_value": 3.4136690260472836e-32,
+            "p_adjusted": 6.827338052094567e-32
+          }
+        },
+        "srm": {
+          "control_n": 5011,
+          "treatment_n": 4989,
+          "p_value": 0.8258711547035709,
+          "passed": true
+        },
+        "economics": {
+          "effect": 1.8626119951036693,
+          "ci_low": 1.5419335376436107,
+          "ci_high": 2.183290452563728,
+          "p_value": 9.479931734459617e-30,
+          "bootstrap_low": 1.591856835190117,
+          "bootstrap_high": 2.166601957368288,
+          "bootstrap_iterations": 200
+        },
+        "bonus_only_difference": -0.12455769450881721,
+        "rules": {
+          "srm": true,
+          "primary_significant": true,
+          "practical_effect": true,
+          "contribution_noninferior": true,
+          "paid_conversion_noninferior": true,
+          "bonus_only_guardrail": true
+        },
+        "decision": "Advance to a real controlled pilot",
+        "power": {
+          "control_rate": 0.2,
+          "mde": 0.02,
+          "alpha": 0.05,
+          "power": 0.8,
+          "per_arm": 6510,
+          "total": 13020,
+          "method": "two-proportion normal planning approximation"
+        },
+        "data_type": "Synthetic analytical simulation"
+      }
+    },
+    {
+      "scenario": "neutral",
+      "summary": [
+        {
+          "variant": "control",
+          "users": 5011,
+          "mature_users": 3466,
+          "d1": 0.25116279069767444,
+          "d7": 0.11664141960614585,
+          "d30": 0.1249266862170088,
+          "meaningful_d7": 0.01384981605713049,
+          "paid_conversion": 0.1289671090594345,
+          "revenue": 8493.0,
+          "inference_cost": 751.952409,
+          "contribution": 7741.0475910000005,
+          "margin": 0.9114620971388203,
+          "arpu": 2.4503750721292556,
+          "arppu": 19.0,
+          "active_users": 3466,
+          "requests": 58322,
+          "bonus_only_rate": 0.37402275300587695
+        },
+        {
+          "variant": "treatment",
+          "users": 4989,
+          "mature_users": 3370,
+          "d1": 0.3464742938427149,
+          "d7": 0.2691556327327979,
+          "d30": 0.13967489464178207,
+          "meaningful_d7": 0.2127197742565661,
+          "paid_conversion": 0.13827893175074185,
+          "revenue": 8854.0,
+          "inference_cost": 849.3292116,
+          "contribution": 8004.6707884,
+          "margin": 0.9040739539643099,
+          "arpu": 2.627299703264095,
+          "arppu": 19.0,
+          "active_users": 3370,
+          "requests": 66531,
+          "bonus_only_rate": 0.32914114731871524
+        }
+      ],
+      "experiment": {
+        "primary": {
+          "control_n": 4621,
+          "treatment_n": 4607,
+          "control_rate": 0.01384981605713049,
+          "treatment_rate": 0.2127197742565661,
+          "effect": 0.19886995819943562,
+          "ci_low": 0.18668821928138027,
+          "ci_high": 0.21128875086510368,
+          "p_value": 9.076449679776698e-200
+        },
+        "secondary": {
+          "d1": {
+            "control_n": 4945,
+            "treatment_n": 4921,
+            "control_rate": 0.25116279069767444,
+            "treatment_rate": 0.3464742938427149,
+            "effect": 0.09531150314504044,
+            "ci_low": 0.07730590081752875,
+            "ci_high": 0.11323442929302645,
+            "p_value": 4.5387625715490515e-25,
+            "p_adjusted": 1.3616287714647155e-24
+          },
+          "d7": {
+            "control_n": 4621,
+            "treatment_n": 4607,
+            "control_rate": 0.11664141960614585,
+            "treatment_rate": 0.2691556327327979,
+            "effect": 0.15251421312665206,
+            "ci_low": 0.13668015818781376,
+            "ci_high": 0.16828687245343393,
+            "p_value": 5.6546973809179554e-77,
+            "p_adjusted": 2.2618789523671822e-76
+          },
+          "d30": {
+            "control_n": 3410,
+            "treatment_n": 3322,
+            "control_rate": 0.1249266862170088,
+            "treatment_rate": 0.13967489464178207,
+            "effect": 0.014748208424773271,
+            "ci_low": -0.0014403100720680045,
+            "ci_high": 0.03096410213173468,
+            "p_value": 0.07407855853788617,
+            "p_adjusted": 0.14815711707577234
+          },
+          "paid_conversion": {
+            "control_n": 3466,
+            "treatment_n": 3370,
+            "control_rate": 0.1289671090594345,
+            "treatment_rate": 0.13827893175074185,
+            "effect": 0.009311822691307342,
+            "ci_low": -0.006821465496582014,
+            "ci_high": 0.02547189799723753,
+            "p_value": 0.2578401648624371,
+            "p_adjusted": 0.2578401648624371
+          }
+        },
+        "srm": {
+          "control_n": 5011,
+          "treatment_n": 4989,
+          "p_value": 0.8258711547035709,
+          "passed": true
+        },
+        "economics": {
+          "effect": 0.14184922895960916,
+          "ci_low": -0.15396822086652134,
+          "ci_high": 0.43766667878573967,
+          "p_value": 0.3472502287278493,
+          "bootstrap_low": -0.10725174407315488,
+          "bootstrap_high": 0.4049263828110464,
+          "bootstrap_iterations": 200
+        },
+        "bonus_only_difference": -0.04488160568716171,
+        "rules": {
+          "srm": true,
+          "primary_significant": true,
+          "practical_effect": true,
+          "contribution_noninferior": true,
+          "paid_conversion_noninferior": true,
+          "bonus_only_guardrail": true
+        },
+        "decision": "Advance to a real controlled pilot",
+        "power": {
+          "control_rate": 0.2,
+          "mde": 0.02,
+          "alpha": 0.05,
+          "power": 0.8,
+          "per_arm": 6510,
+          "total": 13020,
+          "method": "two-proportion normal planning approximation"
+        },
+        "data_type": "Synthetic analytical simulation"
+      }
+    },
+    {
+      "scenario": "negative",
+      "summary": [
+        {
+          "variant": "control",
+          "users": 5011,
+          "mature_users": 3466,
+          "d1": 0.2596562184024267,
+          "d7": 0.11123133520882926,
+          "d30": 0.12551319648093842,
+          "meaningful_d7": 0.012334992425881843,
+          "paid_conversion": 0.12117714945181765,
+          "revenue": 7980.0,
+          "inference_cost": 746.2583334000001,
+          "contribution": 7233.7416666,
+          "margin": 0.9064839181203007,
+          "arpu": 2.3023658395845357,
+          "arppu": 19.0,
+          "active_users": 3466,
+          "requests": 57820,
+          "bonus_only_rate": 0.3823037496628001
+        },
+        {
+          "variant": "treatment",
+          "users": 4989,
+          "mature_users": 3370,
+          "d1": 0.4395448079658606,
+          "d7": 0.2454959843716084,
+          "d30": 0.10325105358217941,
+          "meaningful_d7": 0.18515302800086825,
+          "paid_conversion": 0.08189910979228486,
+          "revenue": 5244.0,
+          "inference_cost": 676.6849194,
+          "contribution": 4567.3150806,
+          "margin": 0.8709601602974829,
+          "arpu": 1.5560830860534125,
+          "arppu": 19.0,
+          "active_users": 3370,
+          "requests": 53383,
+          "bonus_only_rate": 0.43480129919755445
+        }
+      ],
+      "experiment": {
+        "primary": {
+          "control_n": 4621,
+          "treatment_n": 4607,
+          "control_rate": 0.012334992425881843,
+          "treatment_rate": 0.18515302800086825,
+          "effect": 0.1728180355749864,
+          "ci_low": 0.16128565002106174,
+          "ci_high": 0.18463187937570702,
+          "p_value": 1.3721362249675703e-170
+        },
+        "secondary": {
+          "d1": {
+            "control_n": 4945,
+            "treatment_n": 4921,
+            "control_rate": 0.2596562184024267,
+            "treatment_rate": 0.4395448079658606,
+            "effect": 0.1798885895634339,
+            "ci_low": 0.16132255181711724,
+            "ci_high": 0.19827868313865593,
+            "p_value": 2.413123787243541e-78,
+            "p_adjusted": 9.652495148974164e-78
+          },
+          "d7": {
+            "control_n": 4621,
+            "treatment_n": 4607,
+            "control_rate": 0.11123133520882926,
+            "treatment_rate": 0.2454959843716084,
+            "effect": 0.13426464916277914,
+            "ci_low": 0.11885948139453485,
+            "ci_high": 0.1496316526870552,
+            "p_value": 1.0566201062992968e-63,
+            "p_adjusted": 3.1698603188978906e-63
+          },
+          "d30": {
+            "control_n": 3410,
+            "treatment_n": 3322,
+            "control_rate": 0.12551319648093842,
+            "treatment_rate": 0.10325105358217941,
+            "effect": -0.02226214289875901,
+            "ci_low": -0.03746456937759528,
+            "ci_high": -0.007052194973008071,
+            "p_value": 0.004135057208243652,
+            "p_adjusted": 0.004135057208243652
+          },
+          "paid_conversion": {
+            "control_n": 3466,
+            "treatment_n": 3370,
+            "control_rate": 0.12117714945181765,
+            "treatment_rate": 0.08189910979228486,
+            "effect": -0.03927803965953279,
+            "ci_low": -0.053582240528735156,
+            "ci_high": -0.024994355556655325,
+            "p_value": 7.918607871903735e-08,
+            "p_adjusted": 1.583721574380747e-07
+          }
+        },
+        "srm": {
+          "control_n": 5011,
+          "treatment_n": 4989,
+          "p_value": 0.8258711547035709,
+          "passed": true
+        },
+        "economics": {
+          "effect": -0.7317712331476443,
+          "ci_low": -0.9938679833218105,
+          "ci_high": -0.4696744829734781,
+          "p_value": 4.5803938060314163e-08,
+          "bootstrap_low": -1.0140386659448744,
+          "bootstrap_high": -0.48889871622358927,
+          "bootstrap_iterations": 200
+        },
+        "bonus_only_difference": 0.05249754953475433,
+        "rules": {
+          "srm": true,
+          "primary_significant": true,
+          "practical_effect": true,
+          "contribution_noninferior": false,
+          "paid_conversion_noninferior": false,
+          "bonus_only_guardrail": true
+        },
+        "decision": "Do not advance: economic guardrail harm",
+        "power": {
+          "control_rate": 0.2,
+          "mde": 0.02,
+          "alpha": 0.05,
+          "power": 0.8,
+          "per_arm": 6510,
+          "total": 13020,
+          "method": "two-proportion normal planning approximation"
+        },
+        "data_type": "Synthetic analytical simulation"
+      }
+    }
+  ]
+}

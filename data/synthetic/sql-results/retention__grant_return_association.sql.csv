@@ -1,0 +1,3 @@
+variant,observed_grants,next_calendar_day_active_share,grants_with_overlapping_reward_window
+control,4945,0.25116279069767444,0
+treatment,23796,0.3135821146411161,19071

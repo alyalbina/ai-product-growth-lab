@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.db
+*.sqlite
+.env
+.streamlit/secrets.toml
+data/synthetic/*.csv
+!data/synthetic/sensitivity.csv
+!data/synthetic/segment-profitability.csv
+data/synthetic/*.csv.gz
+work/

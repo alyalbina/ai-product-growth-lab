@@ -1,0 +1,25 @@
+name: Analytics verification
+on:
+  push:
+    paths-ignore: ['**/*.md', 'case-study/**', 'docs/screenshots/**', 'LICENSE']
+  pull_request:
+    paths-ignore: ['**/*.md', 'case-study/**', 'docs/screenshots/**', 'LICENSE']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m ruff check .
+      - run: python -m pytest -q
+      - run: python -m scripts.pipeline --users 250 --scenarios --output work/ci-release
+      - run: python -m scripts.external
