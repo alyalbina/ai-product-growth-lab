@@ -1,6 +1,6 @@
 # CV, LinkedIn and interview preparation
 
-This is independent portfolio work, built with AI engineering assistance. Monolit experience motivated the question; no preserved Monolit logs, experimental results or verified rollout are represented. Review the implementation and reproduce it before presenting technical ownership in an interview. GitHub and the static public case were verified on 11 October 2026; a hosted Python runtime is still pending.
+This is independent portfolio work, built with AI engineering assistance. Monolit experience motivated the question; no preserved Monolit logs, experimental results or verified rollout are represented. Review the implementation and reproduce it before presenting technical ownership in an interview. GitHub, the public case and the hosted Python dashboard were verified on 11 October 2026.
 
 ## English CV
 
