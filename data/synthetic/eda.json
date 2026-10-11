@@ -1,0 +1,129 @@
+{
+  "rows": {
+    "users": 10000,
+    "events": 472722,
+    "token_transactions": 170571,
+    "subscriptions": 1753,
+    "ai_requests": 302397,
+    "experiment_assignments": 10000,
+    "payments": 2587,
+    "user_days": 458248
+  },
+  "nulls": {
+    "users": {
+      "user_id": 0,
+      "signup_date": 0,
+      "acquisition_channel": 0,
+      "user_segment": 0,
+      "country": 0,
+      "experiment_group": 0,
+      "observed_days": 0
+    },
+    "events": {
+      "event_id": 0,
+      "user_id": 0,
+      "event_timestamp": 0,
+      "event_type": 0,
+      "session_id": 40082
+    },
+    "token_transactions": {
+      "transaction_id": 0,
+      "user_id": 0,
+      "timestamp": 0,
+      "transaction_type": 0,
+      "token_amount": 0,
+      "estimated_cost_usd": 0,
+      "balance_after": 0,
+      "grant_id": 0,
+      "expires_at": 0,
+      "request_id": 47314
+    },
+    "subscriptions": {
+      "subscription_id": 0,
+      "user_id": 0,
+      "plan": 0,
+      "started_at": 0,
+      "cancelled_at": 1576,
+      "amount_usd": 0
+    },
+    "ai_requests": {
+      "request_id": 0,
+      "user_id": 0,
+      "timestamp": 0,
+      "model_type": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_inference_cost": 0,
+      "success": 0,
+      "session_id": 0,
+      "credit_spent": 0
+    },
+    "experiment_assignments": {
+      "user_id": 0,
+      "variant": 0,
+      "assigned_at": 0
+    },
+    "payments": {
+      "payment_id": 0,
+      "user_id": 0,
+      "subscription_id": 0,
+      "timestamp": 0,
+      "amount_usd": 0,
+      "payment_type": 0
+    },
+    "user_days": {
+      "user_id": 0,
+      "date": 0,
+      "age_day": 0,
+      "is_active": 0,
+      "is_meaningful": 0,
+      "requests": 0,
+      "inference_cost": 0,
+      "revenue": 0,
+      "credit_spent": 0,
+      "bonus_only": 0
+    }
+  },
+  "users_by_channel": {
+    "organic": 3513,
+    "referral": 2612,
+    "paid_search": 2378,
+    "social": 1497
+  },
+  "users_by_segment": {
+    "explorer": 3950,
+    "professional": 3508,
+    "casual": 2542
+  },
+  "observed_days": {
+    "count": 10000.0,
+    "mean": 45.8248,
+    "std": 25.86153102271178,
+    "min": 1.0,
+    "25%": 23.0,
+    "50%": 46.0,
+    "75%": 68.0,
+    "max": 90.0
+  },
+  "successful_requests_per_user_30d": {
+    "count": 6836.0,
+    "mean": 18.26404330017554,
+    "std": 23.51101596104649,
+    "min": 0.0,
+    "50%": 12.0,
+    "90%": 31.0,
+    "99%": 125.0,
+    "max": 194.0
+  },
+  "cash_revenue_per_user_30d": {
+    "count": 6836.0,
+    "mean": 2.5375950848449387,
+    "std": 6.4638246966729325,
+    "min": 0.0,
+    "50%": 0.0,
+    "90%": 19.0,
+    "99%": 19.0,
+    "max": 19.0
+  },
+  "note": "Null session IDs on non-session events and null uncancelled subscription dates are structural, not data loss. Extremes are reported rather than silently trimmed."
+}

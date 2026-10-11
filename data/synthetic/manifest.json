@@ -1,0 +1,51 @@
+{
+  "config": {
+    "n_users": 10000,
+    "horizon_days": 90,
+    "seed": 42,
+    "scenario": "neutral",
+    "daily_credit": 1.0,
+    "grant_days": 5,
+    "grant_frequency": 1,
+    "expiry_days": 7,
+    "cost_multiplier": 1.0,
+    "subscription_price": 19.0,
+    "return_multiplier": 1.0,
+    "purchase_multiplier": 1.0
+  },
+  "tables": {
+    "users": {
+      "rows": 10000,
+      "sha256": "02f06c4067542d885a3f7f8276f58b94ccf63a17749c55eb5b9f1c38b8769005"
+    },
+    "events": {
+      "rows": 472722,
+      "sha256": "5c4ad25e4bb89d16d80ee63bd0ec8bd21b0bbd2cf680391d25aa4de6b3b9bf4b"
+    },
+    "token_transactions": {
+      "rows": 170571,
+      "sha256": "667ebc95d2365fd57096bd07c2530c0d58ce52e0a24314cb4e23a526411089c9"
+    },
+    "subscriptions": {
+      "rows": 1753,
+      "sha256": "0b820c20aefba871149a55c3466460005bf0b0185a4e596175831749342de942"
+    },
+    "ai_requests": {
+      "rows": 302397,
+      "sha256": "599b9b8f98e8b280d5dde958fa920300ac7f0f8eec7189cb851de64180feb32f"
+    },
+    "experiment_assignments": {
+      "rows": 10000,
+      "sha256": "4bedb730aa3ca2d637dfa4a38c21a0f09dea52ec8528f14518f96ded09d48b80"
+    },
+    "payments": {
+      "rows": 2587,
+      "sha256": "65de382368ffa473ea0b79d92bd9af80683361c106702644471ecc61a7545a9a"
+    },
+    "user_days": {
+      "rows": 458248,
+      "sha256": "eec601cd12e89bfa978d94284031cf42c1cd50e4110a0739ce25a8ae8ebecfef"
+    }
+  },
+  "data_origin": "synthetic"
+}

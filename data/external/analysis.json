@@ -1,0 +1,326 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset",
+  "doi": "10.24432/C5F88Q",
+  "license": "CC BY 4.0",
+  "sha256": "b3055ee355f59134d851d32641183cb4a8b45def7124d2f50442a042f358e0d9",
+  "sessions": 12330,
+  "purchases": 1908,
+  "conversion": 0.15474452554744525,
+  "ci_low": 0.14846850895658126,
+  "ci_high": 0.16123560647040025,
+  "missing_cells": 0,
+  "identical_feature_rows": 125,
+  "numeric_outliers": {
+    "ProductRelated": {
+      "min": 0.0,
+      "max": 705.0,
+      "p99": 221.0
+    },
+    "ProductRelated_Duration": {
+      "min": 0.0,
+      "max": 63973.52223,
+      "p99": 8701.142696919998
+    },
+    "BounceRates": {
+      "min": 0.0,
+      "max": 0.2,
+      "p99": 0.2
+    },
+    "ExitRates": {
+      "min": 0.0,
+      "max": 0.2,
+      "p99": 0.2
+    }
+  },
+  "groups": {
+    "VisitorType": [
+      {
+        "group": "New_Visitor",
+        "sessions": 1694,
+        "purchases": 422,
+        "conversion": 0.24911452184179456,
+        "ci_low": 0.22910188962332226,
+        "ci_high": 0.27026243819183027
+      },
+      {
+        "group": "Other",
+        "sessions": 85,
+        "purchases": 16,
+        "conversion": 0.18823529411764706,
+        "ci_low": 0.1193214344488493,
+        "ci_high": 0.2841102436940299
+      },
+      {
+        "group": "Returning_Visitor",
+        "sessions": 10551,
+        "purchases": 1470,
+        "conversion": 0.1393232868922377,
+        "ci_low": 0.1328470154664346,
+        "ci_high": 0.1460620965563255
+      }
+    ],
+    "Month": [
+      {
+        "group": "Aug",
+        "sessions": 433,
+        "purchases": 76,
+        "conversion": 0.17551963048498845,
+        "ci_low": 0.1425861201819847,
+        "ci_high": 0.21415991587742877
+      },
+      {
+        "group": "Dec",
+        "sessions": 1727,
+        "purchases": 216,
+        "conversion": 0.1250723798494499,
+        "ci_low": 0.11029803972057867,
+        "ci_high": 0.14151096138669433
+      },
+      {
+        "group": "Feb",
+        "sessions": 184,
+        "purchases": 3,
+        "conversion": 0.016304347826086956,
+        "ci_low": 0.005560179056259568,
+        "ci_high": 0.04683218886124252
+      },
+      {
+        "group": "Jul",
+        "sessions": 432,
+        "purchases": 66,
+        "conversion": 0.1527777777777778,
+        "ci_low": 0.12192345385689553,
+        "ci_high": 0.18975285887447207
+      },
+      {
+        "group": "June",
+        "sessions": 288,
+        "purchases": 29,
+        "conversion": 0.10069444444444445,
+        "ci_low": 0.07102785950182951,
+        "ci_high": 0.14087300979408912
+      },
+      {
+        "group": "Mar",
+        "sessions": 1907,
+        "purchases": 192,
+        "conversion": 0.10068169900367069,
+        "ci_low": 0.08796887338619118,
+        "ci_high": 0.11500006316810389
+      },
+      {
+        "group": "May",
+        "sessions": 3364,
+        "purchases": 365,
+        "conversion": 0.10850178359096314,
+        "ci_low": 0.09843494104020942,
+        "ci_high": 0.11946173485547273
+      },
+      {
+        "group": "Nov",
+        "sessions": 2998,
+        "purchases": 760,
+        "conversion": 0.25350233488992663,
+        "ci_low": 0.23825279592035084,
+        "ci_high": 0.2693827603622756
+      },
+      {
+        "group": "Oct",
+        "sessions": 549,
+        "purchases": 115,
+        "conversion": 0.20947176684881602,
+        "ci_low": 0.17750945935206253,
+        "ci_high": 0.24547158718434986
+      },
+      {
+        "group": "Sep",
+        "sessions": 448,
+        "purchases": 86,
+        "conversion": 0.19196428571428573,
+        "ci_low": 0.1581742909426092,
+        "ci_high": 0.23099198715776742
+      }
+    ],
+    "TrafficType": [
+      {
+        "group": "1",
+        "sessions": 2451,
+        "purchases": 262,
+        "conversion": 0.10689514483884129,
+        "ci_low": 0.09527214103914936,
+        "ci_high": 0.11974844895620992
+      },
+      {
+        "group": "2",
+        "sessions": 3913,
+        "purchases": 847,
+        "conversion": 0.21645796064400716,
+        "ci_low": 0.20383577108932033,
+        "ci_high": 0.2296363203064571
+      },
+      {
+        "group": "3",
+        "sessions": 2052,
+        "purchases": 180,
+        "conversion": 0.08771929824561403,
+        "ci_low": 0.07623715406324577,
+        "ci_high": 0.10074218316123404
+      },
+      {
+        "group": "4",
+        "sessions": 1069,
+        "purchases": 165,
+        "conversion": 0.15434985968194576,
+        "ci_low": 0.13393344879844604,
+        "ci_high": 0.17724156786027323
+      },
+      {
+        "group": "5",
+        "sessions": 260,
+        "purchases": 56,
+        "conversion": 0.2153846153846154,
+        "ci_low": 0.1697522443913564,
+        "ci_high": 0.26930482927127686
+      },
+      {
+        "group": "6",
+        "sessions": 444,
+        "purchases": 53,
+        "conversion": 0.11936936936936937,
+        "ci_low": 0.0924291375484682,
+        "ci_high": 0.15283948744650405
+      },
+      {
+        "group": "7",
+        "sessions": 40,
+        "purchases": 12,
+        "conversion": 0.3,
+        "ci_low": 0.18074845229746528,
+        "ci_high": 0.45430018818144935
+      },
+      {
+        "group": "8",
+        "sessions": 343,
+        "purchases": 95,
+        "conversion": 0.27696793002915454,
+        "ci_low": 0.2322782518527292,
+        "ci_high": 0.32659801247789666
+      },
+      {
+        "group": "9",
+        "sessions": 42,
+        "purchases": 4,
+        "conversion": 0.09523809523809523,
+        "ci_low": 0.03766224880557388,
+        "ci_high": 0.22065105808571023
+      },
+      {
+        "group": "10",
+        "sessions": 450,
+        "purchases": 90,
+        "conversion": 0.2,
+        "ci_low": 0.16565109916572324,
+        "ci_high": 0.23942749215205916
+      },
+      {
+        "group": "11",
+        "sessions": 247,
+        "purchases": 47,
+        "conversion": 0.1902834008097166,
+        "ci_low": 0.14622018221345975,
+        "ci_high": 0.24383279898305335
+      },
+      {
+        "group": "12",
+        "sessions": 1,
+        "purchases": 0,
+        "conversion": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.7934506856227626
+      },
+      {
+        "group": "13",
+        "sessions": 738,
+        "purchases": 43,
+        "conversion": 0.058265582655826556,
+        "ci_low": 0.043542188280847854,
+        "ci_high": 0.07756382130173216
+      },
+      {
+        "group": "14",
+        "sessions": 13,
+        "purchases": 2,
+        "conversion": 0.15384615384615385,
+        "ci_low": 0.043258178358081184,
+        "ci_high": 0.4223463101948254
+      },
+      {
+        "group": "15",
+        "sessions": 38,
+        "purchases": 0,
+        "conversion": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.09180986822558396
+      },
+      {
+        "group": "16",
+        "sessions": 3,
+        "purchases": 1,
+        "conversion": 0.3333333333333333,
+        "ci_low": 0.06149194472039621,
+        "ci_high": 0.7923403991979522
+      },
+      {
+        "group": "17",
+        "sessions": 1,
+        "purchases": 0,
+        "conversion": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.7934506856227626
+      },
+      {
+        "group": "18",
+        "sessions": 10,
+        "purchases": 0,
+        "conversion": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.2775327998628892
+      },
+      {
+        "group": "19",
+        "sessions": 17,
+        "purchases": 1,
+        "conversion": 0.058823529411764705,
+        "ci_low": 0.010460400984997592,
+        "ci_high": 0.26982030637575405
+      },
+      {
+        "group": "20",
+        "sessions": 198,
+        "purchases": 50,
+        "conversion": 0.25252525252525254,
+        "ci_low": 0.1971136300676066,
+        "ci_high": 0.3173567836294213
+      }
+    ],
+    "Weekend": [
+      {
+        "group": "False",
+        "sessions": 9462,
+        "purchases": 1409,
+        "conversion": 0.1489114352145424,
+        "ci_low": 0.14188083682875144,
+        "ci_high": 0.15622699342559712
+      },
+      {
+        "group": "True",
+        "sessions": 2868,
+        "purchases": 499,
+        "conversion": 0.17398884239888424,
+        "ci_low": 0.16055301586843518,
+        "ci_high": 0.18829683297805888
+      }
+    ]
+  },
+  "interpretation": "Descriptive session conversion. Associations are not causal. No user history, exact dates or monetary revenue; retention and ARPU cannot be estimated. PageValues is outcome-related and unsuitable for a pre-treatment causal adjustment."
+}

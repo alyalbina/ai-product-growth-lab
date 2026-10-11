@@ -1,0 +1,9 @@
+variant,acquisition_channel,registered,first_request,activated,repeat_usage,paid_users,free_to_paid_conversion,repeat_then_paid
+control,organic,1234,1234,1158,917,168,0.13614262560777957,147
+control,paid_search,846,846,777,512,89,0.10520094562647754,76
+control,referral,895,895,860,712,146,0.16312849162011173,130
+control,social,491,491,442,295,44,0.08961303462321792,31
+treatment,organic,1167,1153,1115,972,178,0.15252784918594686,158
+treatment,paid_search,781,764,723,584,97,0.12419974391805377,85
+treatment,referral,889,877,860,790,141,0.15860517435320584,123
+treatment,social,533,519,466,354,50,0.09380863039399624,42
