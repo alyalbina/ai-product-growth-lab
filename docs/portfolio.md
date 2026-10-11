@@ -10,7 +10,7 @@ This is independent portfolio work, built with AI engineering assistance. Monoli
 
 **Technical skills:** Python, SQL (SQLite), pandas, NumPy, SciPy, Plotly, Streamlit, cohort analysis, metric design, experiment design, power analysis, confidence intervals, unit economics, data validation, pytest, Ruff, GitHub Actions.
 
-**GitHub:** https://github.com/alyalbina/ai-product-growth-lab. **Public case study:** https://alyalbina.github.io/ai-product-growth-lab/. **Interactive research preview:** https://alyalbina.github.io/ai-product-growth-lab/research.html. **Python dashboard:** hosted URL pending; run locally from the repository. Do not present the static preview as a hosted Python simulator or these outputs as Monolit business impact.
+**Live Python dashboard:** https://alyalbina-ai-growth-lab.streamlit.app/. Filters, exports and the scenario simulator were verified in the published app. Synthetic results remain an analytical simulation, with no claimed Monolit business impact.
 
 ## LinkedIn
 
