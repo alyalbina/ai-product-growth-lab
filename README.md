@@ -47,7 +47,7 @@ Serve the static case study with `python -m http.server 8000` and open http://lo
 
 ![Published Streamlit dashboard: synthetic data and explicit D7 interpretation boundary](docs/screenshots/dashboard-cloud.jpg)
 
-The [desktop case](docs/screenshots/case-study-desktop.jpg), [mobile case](docs/screenshots/case-study-mobile.jpg) and [scenario lab](docs/screenshots/dashboard-simulation-lab.jpg) screenshots are actual browser captures.
+The redesigned [English case](docs/screenshots/redesigned-case-en.jpg) and [Russian case](docs/screenshots/redesigned-case-ru.jpg) screenshots are actual published browser captures. Earlier [mobile case](docs/screenshots/case-study-mobile.jpg) and [scenario lab](docs/screenshots/dashboard-simulation-lab.jpg) captures document the previous verification.
 
 ## What is implemented
 
@@ -111,4 +111,4 @@ tests/                 Reconciliation, statistical and interface checks
 
 This project complements [Hotel Guest Experience Platform](https://github.com/alyalbina/hotel-guest-experience-platform), which focuses on UX research, business requirements, service design and MVP workflows. This second project focuses on analytical depth and defensible product decisions.
 
-**Author:** Albina Urubkina. Code: MIT. UCI data: CC BY 4.0 with original creator attribution in `data/external/README.md`.
+**Author:** Albina Urubkina. Code: MIT. Manrope typography: SIL OFL 1.1 ([font license](case-study/assets/manrope-OFL.txt)). UCI data: CC BY 4.0 with original creator attribution in `data/external/README.md`.
