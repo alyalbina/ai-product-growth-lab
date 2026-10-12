@@ -1,4 +1,17 @@
+![AI Product Growth Lab — A better reason to return](case-study/assets/cover.png)
+
 # AI Product Growth Lab
+
+### A better reason to return. A harder question about value.
+
+**Product analytics · Experimentation · AI unit economics**
+
+[Read the designed case ↗](https://alyalbina.github.io/ai-product-growth-lab/) · [Interactive research ↗](https://alyalbina.github.io/ai-product-growth-lab/research.html) · [Live dashboard ↗](https://alyalbina-ai-growth-lab.streamlit.app/) · [Кейс на русском ↗](https://alyalbina.github.io/ai-product-growth-lab/index.ru.html)
+
+**Albina Urubkina** · Independent analytics project · AI-assisted implementation  
+AI SaaS results are synthetic. The licensed UCI real-data study is separate.
+
+---
 
 **Retention, Monetization & Experimentation**
 
